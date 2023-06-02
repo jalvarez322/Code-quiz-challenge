@@ -5,71 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Code Quiz</title>
 </head>
 <body>
-    <!--main outer div-->
-    <div class="outer-container">
-
-        <!--top bar secton-->
-        <div class="top-bar">
-            <button>view scores</button>
-            <p>timer: 00:00</p>
+    <header>
+        <div id="highscore-link">
+            <a href="./highscores.html">View Highscores</a>
         </div>
-
-
-        <!--Inner Div-->
-        <div class="inner-container">
-
-            <!--Header/Quiz Introduction-->
-            <header>
-                <header class="quiz-intro">
-                    <h1>Welcome to the code quiz challenge!</h1>
-                    <p>Try to answer these coding questions to test out your coding knowledge</p>
-                    <button>Start-Quiz</button>
-                </header>
-
-                <!--main quiz-->
-                <main>
-                    <section class="question-screen">
-                        <h2>Question here</h2>
-                        <ul>
-                            <li>
-                                <button>answer 1</button>
-                                <button>answer 2</button>
-                                <button>answer 3</button>
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section class="quiz-finish-screen">
-                        <h2>quiz finished!</h2>
-                        <p>Your final score: 00</p>
-                        <div>
-                            <label for="">Enter Initials</label>
-                            <input type="text">
-                            <button>submit</button>
-                        </div>
-                    </section>
-
-                    <section class="highscores-screen">
-                        <h2>Highscores</h2>
-                        <ol>
-                            <li>WH-20</li>
-                            <li>WH-20</li>
-                            <li>WH-20</li>
-                            <li>WH-20</li>
-                        </ol>
-                        <button>Go back</button>
-                        <button>Clear Highscores</button>
-                    </section>
-
-                </main>
-
+        <div id="count-down-clock">Time: <span id="time-span">0</span></div>
+    </header>
+    <main id="start-card-container">
+        <section id="start-card" class="card">
+            <h2>Coding Quiz Challenge</h2>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button id="start-quiz-btn" class="quiz-btn">Start Quiz</button>
+        </section>
+        <section id="card-container" class="card">
+        </section>
+        <section id="end-screen-container" class="card">
+            <h2 id="game-over-card">All done!</h2>
+            <p id="score-p">Your final score is: <span id="span-score"></span></p>
+            <div id="initials-form">
+                <p>Enter initials:</p>
+                <input type="text" id="initials">
+                <a href="/highscores.html"><button id="submit-score-btn">Submit</button></a>
             </div>
+        </section>
+    </main>
+    
 
-        </div>
 
-    </body>
+    <script src="./assets/script.js"></script>
+</body>
 </html>
