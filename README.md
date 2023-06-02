@@ -1,4 +1,4 @@
-# <Code Quiz Challange>
+# Code Quiz Challange
 
 ## Description
 
